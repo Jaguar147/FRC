@@ -1,0 +1,36 @@
+
+import java.util.Scanner;
+
+public class AverageOfPositiveNumbers {
+    public static void main(String[] args) {
+         Double holder = 0.0;
+         Double i = 0.0;
+         Integer pos = 0;
+
+        while (true) {
+            Scanner scanner = new Scanner(System.in);
+            Double number = Double.valueOf(scanner.nextLine());
+      
+            if (number == 0 && pos ==0) {
+            System.out.println("Cannot calculate the average");
+            break;
+        }
+            else if (number == 0) {
+                holder = holder + number;
+                 i ++;
+                 pos ++;
+                
+                Double avg = (holder/i);
+                System.out.println(avg);
+                break;
+            }
+
+        if (number > 0) {
+            holder = holder + number;
+            i ++;
+            pos ++;
+            Double avg = (holder/i);
+            }
+        }
+    }
+}
